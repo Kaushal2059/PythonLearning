@@ -1,0 +1,19 @@
+Whats the best way to learn coding
+-Practice daily
+\n will addd new line
+-example kaushal\nRupatheti will print kaushal
+                                       Rpakheti
+Indentation or spaces are really important
+cant write int in front of variables
+Anything inside "" is a datatype also "type" function gives the data type
+Implicit type casting is  done by the system only but explicit is done by external human
+Head over to ascii.co.uk/art for dofferent ascii arts
+\ can be used to escape the useful symbol next to it. Example: print('welcome user, what\'s your name') this will treat 's in what's as a part of symbol
+Randomisation
+    DO WATCH sudo random number generator - khan academy
+    https://docs.python.org/3/library/random.html
+python Modles:
+    when writing a code if it becomes too long which leads to the problem of ununderstandable codes and it is than seperated into differet modules
+    where eaach module is responsible for different fuctionalities
+    Different programmers can be working on different modules in a single project
+    

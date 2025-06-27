@@ -1,0 +1,7 @@
+city = (input("Whats the name of the city you grew?:\n "))
+pet = (input("Whats your pet name?:\n "))
+print("Your pet name is ",city+pet) 
+#  print("Hello" + input("Enter your name")+ "!")
+# UsIn = input("Enter a text: ")
+# length = len(UsIn)
+# print(length)
