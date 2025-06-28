@@ -16,4 +16,6 @@ python Modles:
     when writing a code if it becomes too long which leads to the problem of ununderstandable codes and it is than seperated into differet modules
     where eaach module is responsible for different fuctionalities
     Different programmers can be working on different modules in a single project
-    
+
+For loop
+    A for loop lets you repeat a block of code for each item in a list (or any collection).
