@@ -19,3 +19,10 @@ python Modles:
 
 For loop
     A for loop lets you repeat a block of code for each item in a list (or any collection).
+
+where to use for loop and where to use while loop
+        for loop is useful when you want to iterate on something and you need to do something with each thing
+        while loop is to carry out something until some condition is matched and no need to do anything with the iterated value
+        in for loop you setup how many times the loop is going to run
+        in while loop you keep iterating until the condition is mathed. So it is more dangerous because if your condition never matches than the loop tends to become an infinite loop
+        
