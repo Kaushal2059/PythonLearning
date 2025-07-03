@@ -1,7 +1,7 @@
 import string
 import random 
 
-letters = list(string.ascii_letters)
+letters = list(string.ascii_lowercase)
 symbols = list(string.punctuation)
 numbers = list(string.digits)
 
