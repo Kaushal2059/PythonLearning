@@ -26,3 +26,6 @@ where to use for loop and where to use while loop
         in for loop you setup how many times the loop is going to run
         in while loop you keep iterating until the condition is mathed. So it is more dangerous because if your condition never matches than the loop tends to become an infinite loop
         
+
+Docstrings 
+    used to create a litte documentation in our function as we are coding along
