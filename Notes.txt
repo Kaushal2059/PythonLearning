@@ -29,3 +29,13 @@ where to use for loop and where to use while loop
 
 Docstrings 
     used to create a litte documentation in our function as we are coding along
+
+Scope:
+    Local scope:
+        exists within a function only
+
+    Global scope:
+        abailable everywhere in the fuctionalities
+
+Namespace:
+    
