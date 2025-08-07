@@ -38,4 +38,9 @@ Scope:
         abailable everywhere in the fuctionalities
 
 Namespace:
+
+OOPs:
+    Spliting a larger task into small chunks and the small chunks can be reused and expanded but it is far beyond that
+
+How to use OOPs:
     
