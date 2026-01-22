@@ -34,7 +34,7 @@ for char in range(0, no_of_numbers):
 random.shuffle(password_list)
 # final_password = "".join(password_list)
 
-final_password = ""
+final_password = "" # converting list into string
 for char in password_list:
     final_password += char
 

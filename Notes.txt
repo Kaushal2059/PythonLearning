@@ -43,4 +43,16 @@ OOPs:
     Spliting a larger task into small chunks and the small chunks can be reused and expanded but it is far beyond that
 
 How to use OOPs:
-    
+
+Inheritence and slicing
+    Class Inheritence:
+        Using properties(appearances and behaviour) from one class to the other class
+        For example class Fish(Animal):
+            def __init__(self):
+                super().__init__()
+                Here class Fish inherits from the super calss Animal
+                    also super method is used to inherit all the attributes from the super class Animal
+
+    slicing:
+        
+

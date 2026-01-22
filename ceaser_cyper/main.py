@@ -8,10 +8,9 @@ alphabet = list(string.ascii_letters)
 def caeser(original_text, shift_amount, encode_or_decode):
     ciper = ""
     if encode_or_decode == "decode":
-                shift_amount *= -1
+        shift_amount *= -1
     for letter in original_text:
-
-        if letter not in original_text:
+        if letter not in alphabet:
             ciper += letter
         else:
             shifted_position =  alphabet.index(letter) + shift_amount
