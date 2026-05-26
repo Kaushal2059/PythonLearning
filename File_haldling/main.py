@@ -9,8 +9,8 @@
 #     print(contents)
 
 # TO write on the file (w => write) If no file exists, w mode will create a file for you0
-with open ("demo.txt", mode = "w") as filewrite:
-    filewrite.write("new text0000")
+with open ("C:/Users/rupak/OneDrive/Desktop/demo.txt", mode = "a") as filewrite: # Using absolute path
+    filewrite.write(" new file new")
 
 # #To add conent (a => append)
 # with open ("demo.txt", mode = "a") as filewrite:
