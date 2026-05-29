@@ -15,10 +15,11 @@ while len(correct_guess) < 51:
     answer_state = screen.textinput(title=f"{len(correct_guess)}/50 States Correct", 
                                         prompt="What is the other state name?").title()
     if answer_state == "Exit":
-        missing_states = []
-        for state in states:
-            if state not in correct_guess:
-                missing_states.append(state)
+        missing_states = [state for state in states if state not in correct_guess]
+        # missing_states =[]
+        # for state in states:
+        #     if state not in correct_guess:
+        #         missing_states.append(state)
         new_data = pandas.DataFrame(missing_states)
         new_data.to_csv("Quiz_game/missedstates.csv")
         break
