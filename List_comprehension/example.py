@@ -5,7 +5,7 @@ dictionary = {
     "marks" : [10, 20, 80, 66]
     }
 
-data_frame = pandas.DataFrame(dictionary, )
+data_frame = pandas.DataFrame(dictionary)
 print(data_frame)
 
 # Looping through rows of a data frame 
