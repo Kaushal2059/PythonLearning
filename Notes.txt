@@ -58,3 +58,5 @@ Inheritence and slicing
 
 List comprehension
     creating a new list from the previous list
+
+Handling Errors and exceptoins

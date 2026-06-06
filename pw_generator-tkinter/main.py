@@ -2,6 +2,7 @@ from tkinter import *
 from tkinter import messagebox
 from random import randint,choice,shuffle
 import pyperclip
+import json
 # ---------------------------- PASSWORD GENERATOR ------------------------------- #
 def generate_password():
     letters = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z', 'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']
@@ -24,19 +25,34 @@ def save():
     website = website_field.get()
     email = email_field.get()
     password = password_field.get()
+    new_data  = {website: {
+        "email":email,
+        "password":password
+    }}
 
     if len(website) == 0 or len(email) == 0 or len(password) == 0:
         messagebox.showerror(title="error", message="No fields should be empty!")
-
     else:
-        is_ok = messagebox.askokcancel(title=website, message=f"These are your details\n website: {website}\n email: {email}\n password:{password}\n Is it ok to save?")
-        
-        
-        if is_ok:
-            with open("pw_generator-tkinter/data.txt", mode = "a") as file:
-                file.write(f"{website} | {email} | {password} \n")
-                website_field.delete(0,END)
-                password_field.delete(0,END)
+        try:
+            with open("pw_generator-tkinter/data.json", mode = "r") as file:
+                # read the old data
+                data = json.load(file)          
+        except FileNotFoundError:
+            with open("pw_generator-tkinter/data.json", mode = "w") as file:
+                # save the updated data
+                json.dump(new_data, file, indent = 4)
+        else:
+             #update the old data with the new one
+            data.update(new_data)
+            with open("pw_generator-tkinter/data.json", mode = "w") as file:
+                #saving the old data
+                json.dump(data, file, indent = 4)
+        finally:
+            website_field.delete(0,END)
+            password_field.delete(0,END)
+
+def search():
+    search.
 
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
@@ -58,8 +74,8 @@ password.grid(row=3, column=0)
 
 
 # fields
-website_field = Entry(width=35)
-website_field.grid(row= 1, column= 1, columnspan=2)
+website_field = Entry(width=17)
+website_field.grid(row= 1, column= 1)
 website_field.focus()
 email_field = Entry(width=35)
 email_field.grid(row= 2, column= 1, columnspan=2)
@@ -70,6 +86,8 @@ password_field.grid(row= 3, column= 1)
 #buttons
 generate_password = Button(text="Generate Password",command=generate_password)
 generate_password.grid(row=3, column=2)
+search = Button(text="search", command=search)
+search.grid(row= 1, column=2 )
 add = Button(text="Add", width=30, command=save)
 add.grid(row=4, column=1, columnspan=2)
 
