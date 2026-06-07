@@ -52,7 +52,30 @@ def save():
             password_field.delete(0,END)
 
 def search():
-    search.
+        try:
+            with open("pw_generator-tkinter/data.json", mode = "r") as file:
+                # read the old data
+                data = json.load(file) 
+
+        except FileNotFoundError:
+            messagebox.showinfo(title = "OPPPS!", message = "The requested file doesnot exist")
+        
+        else:
+            user_data = website_field.get()
+            if user_data in data:
+                email = data[user_data]['email']
+                password = data[user_data]["password"]
+
+                messagebox.showinfo(
+                    title=user_data,
+                    message=f"Email: {email}\nPassword: {password}"
+                )
+            else:
+                messagebox.showinfo(
+                    title="Not Found",
+                    message=f"No details for '{user_data}' exist."
+                )
+        
 
 # ---------------------------- UI SETUP ------------------------------- #
 window = Tk()
@@ -86,7 +109,7 @@ password_field.grid(row= 3, column= 1)
 #buttons
 generate_password = Button(text="Generate Password",command=generate_password)
 generate_password.grid(row=3, column=2)
-search = Button(text="search", command=search)
+search = Button(text="search", command=search, width=13)
 search.grid(row= 1, column=2 )
 add = Button(text="Add", width=30, command=save)
 add.grid(row=4, column=1, columnspan=2)
